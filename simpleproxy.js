@@ -4,7 +4,7 @@
 		this.error = false;
 		this.events = [];
 		this.count = 0;
-		this.callback = null;
+		this.callback = undefined;
 	}
 	SimpleProxy.prototype.sign = function(events, callback) {
 		var isArray = (Object.prototype.toString.call(events) === "[object Array]"), 
@@ -15,7 +15,7 @@
 		for ( var i = 0; i < count; i++) {
 			this.events.push({
 				key : events[i],
-				value : null
+				value : undefined
 			});
 		}
 		this.count = count;
@@ -51,7 +51,7 @@
 		}
 		this.count--;
 		if (this.count == 0) {
-			var values = [null];
+			var values = [undefined];
 			for ( var i = 0; i < count; i++) {
 				values.push(events[i].value);
 			}
