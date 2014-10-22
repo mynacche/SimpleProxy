@@ -1,4 +1,4 @@
-(function(){
+(function(undefined){
 	function SimpleProxy() {
 		this.signed = false;
 		this.error = false;
@@ -70,4 +70,4 @@
 	} else {
 		this.SimpleProxy = SimpleProxy;
 	}
-})(undefined);
+})();
